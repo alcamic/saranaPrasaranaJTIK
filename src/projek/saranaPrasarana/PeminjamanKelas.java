@@ -49,7 +49,7 @@ public class PeminjamanKelas extends javax.swing.JFrame {
     }
     
     private void scaleImage(){
-        ImageIcon icon = new ImageIcon("D:\\Projek Lanjut\\logo1.png");
+        ImageIcon icon = new ImageIcon((getClass().getResource("logo1.png")));
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(icon1.getWidth(), icon1.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
@@ -57,7 +57,7 @@ public class PeminjamanKelas extends javax.swing.JFrame {
 
     }
     private void scaleImage1(){
-        ImageIcon icon = new ImageIcon("D:\\Projek Lanjut\\logo3.png");
+        ImageIcon icon = new ImageIcon((getClass().getResource("logo3.png")));
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(icon2.getWidth(), icon2.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
