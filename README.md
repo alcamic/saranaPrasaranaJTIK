@@ -45,18 +45,24 @@ CREATE TABLE pinjambarang (
 ### 3. Screenshot or Preview from Project
 #### 3.1 Halaman Beranda
 <img src="Beranda.png" alt="Beranda" width="400" height="200" />
+
 #### 3.2 Halaman Data Barang
 <img src="Data Barang.png" alt="Data Barang" width="400" height="200" />
+
 #### 3.3 Halaman Data Kelas
 <img src="Data Kelas.png" alt="Data Kelas" width="400" height="200" />
+
 #### 3.4 Halaman Peminjaman Barang
 <img src="Pinjam Barang.png" alt="Pinjam Barang" width="400" height="200" />
+
 #### 3.5 Halaman Pengembalian Barang
 <img src="Pengembalian Barang.png" alt="Pengembalian Barang" width="400" height="200" />
+
 #### 3.6 Halaman Peminjaman Kelas
 <img src="Pinjam Kelas.png" alt="Pinjam Kelas" width="400" height="200" />
+
 #### 3.7 Halaman Pengembalian Kelas
-<img src="Pengembalian Kelas.png" alt="Pengembalian Kelas" width="400" height="200" />
+<img src="Pengembalian Kelas.PNG" alt="Pengembalian Kelas" width="400" height="200" />
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
