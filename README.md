@@ -41,29 +41,29 @@ CREATE TABLE pinjambarang (
   tanggal_kembali DATE DEFAULT NULL
 );
 ```
-
-### 3. Screenshot or Preview from Project
-#### 3.1 Homepage
+# Screenshot or Preview from Project
+#### 1. Homepage
 <img src="Beranda.png" alt="Beranda" width="400" height="200" />
 
-#### 3.2 Item Data Page
+#### 2. Item Data Page
 <img src="Data Barang.png" alt="Data Barang" width="400" height="200" />
 
-#### 3.3 Class Data Page
+#### 3. Class Data Page
 <img src="Data Kelas.png" alt="Data Kelas" width="400" height="200" />
 
-#### 3.4 Item Borrowing Page
+#### 4. Item Borrowing Page
 <img src="Pinjam Barang.png" alt="Pinjam Barang" width="400" height="200" />
 
-#### 3.5 Item Return Page
+#### 5. Item Return Page
 <img src="Pengembalian Barang.png" alt="Pengembalian Barang" width="400" height="200" />
 
-#### 3.6 Class Borrowing Page
+#### 6. Class Borrowing Page
 <img src="Pinjam Kelas.png" alt="Pinjam Kelas" width="400" height="200" />
 
-#### 3.7 Class Return Page
+#### 7. Class Return Page
 <img src="Pengembalian Kelas.PNG" alt="Pengembalian Kelas" width="400" height="200" />
 
+___
 MIT License
 
 Copyright (c) 2024 alcamic
