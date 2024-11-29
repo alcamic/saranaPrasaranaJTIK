@@ -43,26 +43,46 @@ CREATE TABLE pinjambarang (
 ```
 
 ### 3. Screenshot or Preview from Project
-#### 3.1 Halaman Beranda
+#### 3.1 Homepage
 <img src="Beranda.png" alt="Beranda" width="400" height="200" />
 
-#### 3.2 Halaman Data Barang
+#### 3.2 Item Data Page
 <img src="Data Barang.png" alt="Data Barang" width="400" height="200" />
 
-#### 3.3 Halaman Data Kelas
+#### 3.3 Class Data Page
 <img src="Data Kelas.png" alt="Data Kelas" width="400" height="200" />
 
-#### 3.4 Halaman Peminjaman Barang
+#### 3.4 Item Borrowing Page
 <img src="Pinjam Barang.png" alt="Pinjam Barang" width="400" height="200" />
 
-#### 3.5 Halaman Pengembalian Barang
+#### 3.5 Item Return Page
 <img src="Pengembalian Barang.png" alt="Pengembalian Barang" width="400" height="200" />
 
-#### 3.6 Halaman Peminjaman Kelas
+#### 3.6 Class Borrowing Page
 <img src="Pinjam Kelas.png" alt="Pinjam Kelas" width="400" height="200" />
 
-#### 3.7 Halaman Pengembalian Kelas
+#### 3.7 Class Return Page
 <img src="Pengembalian Kelas.PNG" alt="Pengembalian Kelas" width="400" height="200" />
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License
+
+Copyright (c) 2024 alcamic
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
