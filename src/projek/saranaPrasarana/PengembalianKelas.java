@@ -30,23 +30,35 @@ public class PengembalianKelas extends javax.swing.JFrame {
         loadKelas();
         
     }
-    public void loadKelas(){
-        try {
+ public void loadKelas() {
+    try {
         Connection c = KoneksiDatabase.getKoneksi();
         Statement s = c.createStatement();
-        
-        String sql = "SELECT nama_kelas from datakelas WHERE status = 'Terpakai';";
+
+        // Update SQL to fetch both nama_kelas and peminjam
+        String sql = "SELECT nama_kelas, peminjam FROM datakelas WHERE status = 'Terpakai';";
         ResultSet r = s.executeQuery(sql);
-        while (r.next()){
-            String datakelas = r.getString("nama_kelas");
-            ComboKelas.addItem(datakelas);          
+
+        // Clear any existing items in the ComboBox
+        ComboKelas.removeAllItems(); 
+
+        // Add items to ComboBox with both nama_kelas and peminjam
+        while (r.next()) {
+            String namaKelas = r.getString("nama_kelas");
+            String peminjam = r.getString("peminjam");
+
+            // Display both nama_kelas and peminjam in the ComboBox
+            String displayText = namaKelas + " - " + (peminjam != null ? peminjam : "Tidak Ada Peminjam");
+            ComboKelas.addItem(displayText);
         }
+
         r.close();
         s.close();
-        }catch(Exception e){
-            
-        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+        System.out.println("Terjadi Error saat memuat kelas.");
     }
+}
     
     private void scaleImage(){
         ImageIcon icon = new ImageIcon((getClass().getResource("logo1.png")));
@@ -247,12 +259,12 @@ public class PengembalianKelas extends javax.swing.JFrame {
 }
     
     private void pinjamKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinjamKelasActionPerformed
-        // TODO add your handling code here:
-           // Retrieve data from input fields
-    String nama_peminjam = "Kosong";
-    String nama_kelas = ComboKelas.getSelectedItem().toString();
+       // Retrieve the selected item from ComboKelas
+    String selectedItem = ComboKelas.getSelectedItem().toString();
+    String namaKelas = selectedItem.split(" - ")[0]; // Extract the nama_kelas part
+    String namaPeminjam = "Kosong"; // Default value for nama_peminjam
     String status = "Tidak Terpakai";
-    int id_kelas = -1; // Default value to check if ID is retrieved
+    int idKelas = -1; // Default value to check if ID is retrieved
 
     try {
         Connection c = KoneksiDatabase.getKoneksi();
@@ -260,11 +272,11 @@ public class PengembalianKelas extends javax.swing.JFrame {
         // Step 1: Fetch the id_kelas for the selected nama_kelas
         String fetchIdQuery = "SELECT id_kelas FROM datakelas WHERE nama_kelas = ?;";
         PreparedStatement fetchIdStmt = c.prepareStatement(fetchIdQuery);
-        fetchIdStmt.setString(1, nama_kelas);
+        fetchIdStmt.setString(1, namaKelas);
         ResultSet rs = fetchIdStmt.executeQuery();
 
         if (rs.next()) {
-            id_kelas = rs.getInt("id_kelas");
+            idKelas = rs.getInt("id_kelas");
         } else {
             System.out.println("Error: Kelas tidak ditemukan.");
             return; // Exit the method if no matching class is found
@@ -276,9 +288,9 @@ public class PengembalianKelas extends javax.swing.JFrame {
         // Step 2: Update the datakelas table with the new data
         String updateQuery = "UPDATE datakelas SET peminjam = ?, status = ? WHERE id_kelas = ?";
         PreparedStatement updateStmt = c.prepareStatement(updateQuery);
-        updateStmt.setString(1, nama_peminjam);
+        updateStmt.setString(1, namaPeminjam);
         updateStmt.setString(2, status);
-        updateStmt.setInt(3, id_kelas);
+        updateStmt.setInt(3, idKelas);
         updateStmt.executeUpdate();
 
         updateStmt.close();
@@ -286,9 +298,8 @@ public class PengembalianKelas extends javax.swing.JFrame {
     } catch (SQLException e) {
         e.printStackTrace();
         System.out.println("Terjadi Error");
-    }finally{
+    } finally {
         refreshComboBox();
-        
     }
     }//GEN-LAST:event_pinjamKelasActionPerformed
 
