@@ -35,9 +35,10 @@ public class PeminjamanBarang extends javax.swing.JFrame {
         Connection c = KoneksiDatabase.getKoneksi();
         Statement s = c.createStatement();
         
-        String sql = "SELECT nama_barang from databarang WHERE jumlah_total > 0;  ";
+        String sql = "SELECT nama_barang, jumlah_total from databarang WHERE jumlah_total > 0;  ";
         ResultSet r = s.executeQuery(sql);
         while (r.next()){
+            String jumlahtotalbarang = r.getString("jumlah_total");
             String databarang = r.getString("nama_barang");
             ComboBarang.addItem(databarang);          
         }
