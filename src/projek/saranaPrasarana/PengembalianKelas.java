@@ -100,7 +100,7 @@ public class PengembalianKelas extends javax.swing.JFrame {
         icon2 = new javax.swing.JLabel();
         ComboKelas = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        pinjamKelas = new javax.swing.JButton();
+        pengembalianKelas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -207,13 +207,13 @@ public class PengembalianKelas extends javax.swing.JFrame {
         jLabel3.setText("Pilih Kelas");
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
-        pinjamKelas.setText("Submit");
-        pinjamKelas.addActionListener(new java.awt.event.ActionListener() {
+        pengembalianKelas.setText("Submit");
+        pengembalianKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pinjamKelasActionPerformed(evt);
+                pengembalianKelasActionPerformed(evt);
             }
         });
-        jPanel4.add(pinjamKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
+        jPanel4.add(pengembalianKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 520, 230));
 
@@ -258,7 +258,7 @@ public class PengembalianKelas extends javax.swing.JFrame {
     loadKelas(); // Reload the available classes
 }
     
-    private void pinjamKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinjamKelasActionPerformed
+    private void pengembalianKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengembalianKelasActionPerformed
        // Retrieve the selected item from ComboKelas
     String selectedItem = ComboKelas.getSelectedItem().toString();
     String namaKelas = selectedItem.split(" - ")[0]; // Extract the nama_kelas part
@@ -301,7 +301,7 @@ public class PengembalianKelas extends javax.swing.JFrame {
     } finally {
         refreshComboBox();
     }
-    }//GEN-LAST:event_pinjamKelasActionPerformed
+    }//GEN-LAST:event_pengembalianKelasActionPerformed
 
     private void KelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KelasActionPerformed
         // TODO add your handling code here:
@@ -389,6 +389,6 @@ public class PengembalianKelas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JButton pinjamKelas;
+    private javax.swing.JButton pengembalianKelas;
     // End of variables declaration//GEN-END:variables
 }

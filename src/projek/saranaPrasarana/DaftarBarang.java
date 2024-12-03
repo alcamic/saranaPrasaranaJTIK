@@ -115,9 +115,9 @@ public class DaftarBarang extends javax.swing.JFrame {
         tabelBarang = new javax.swing.JTable();
         icon2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        pinjam = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        pinjambarang = new javax.swing.JButton();
+        kembalibarang = new javax.swing.JButton();
+        riwayatbarang = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         icon3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -230,27 +230,27 @@ public class DaftarBarang extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Daftar Barang");
 
-        pinjam.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        pinjam.setText("Pinjam Barang");
-        pinjam.addActionListener(new java.awt.event.ActionListener() {
+        pinjambarang.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        pinjambarang.setText("Pinjam Barang");
+        pinjambarang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pinjamActionPerformed(evt);
+                pinjambarangActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        jButton1.setText("Kembalikan Barang");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        kembalibarang.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        kembalibarang.setText("Kembalikan Barang");
+        kembalibarang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                kembalibarangActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
-        jButton2.setText("Lihat Riwayat Peminjaman");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        riwayatbarang.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
+        riwayatbarang.setText("Lihat Riwayat Peminjaman");
+        riwayatbarang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                riwayatbarangActionPerformed(evt);
             }
         });
 
@@ -268,11 +268,11 @@ public class DaftarBarang extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
-                        .addComponent(pinjam)
+                        .addComponent(pinjambarang)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1)
+                        .addComponent(kembalibarang)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)))
+                        .addComponent(riwayatbarang)))
                 .addContainerGap(409, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -289,9 +289,9 @@ public class DaftarBarang extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pinjam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(riwayatbarang)
+                    .addComponent(kembalibarang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pinjambarang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(10, 10, 10))
         );
 
@@ -624,23 +624,23 @@ public class DaftarBarang extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inputJmlBaikKeyReleased
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void riwayatbarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayatbarangActionPerformed
         // TODO add your handling code here:
         new DaftarPeminjamanBarang().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_riwayatbarangActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void kembalibarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembalibarangActionPerformed
         // TODO add your handling code here:
-        new PeminjamanKelas().setVisible(true);
+        new PengembalianBarang().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_kembalibarangActionPerformed
 
-    private void pinjamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinjamActionPerformed
+    private void pinjambarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinjambarangActionPerformed
         // TODO add your handling code here:
         new PeminjamanBarang().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_pinjamActionPerformed
+    }//GEN-LAST:event_pinjambarangActionPerformed
 
     /**
      * @param args the command line arguments
@@ -689,8 +689,6 @@ public class DaftarBarang extends javax.swing.JFrame {
     private javax.swing.JTextField inputJmlBaik;
     private javax.swing.JTextField inputJmlKbaik;
     private javax.swing.JTextField inputJmlTotal;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -704,7 +702,9 @@ public class DaftarBarang extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton kelas;
-    private javax.swing.JButton pinjam;
+    private javax.swing.JButton kembalibarang;
+    private javax.swing.JButton pinjambarang;
+    private javax.swing.JButton riwayatbarang;
     private javax.swing.JTable tabelBarang;
     private javax.swing.JButton tambah;
     // End of variables declaration//GEN-END:variables
